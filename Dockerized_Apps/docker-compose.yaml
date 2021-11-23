@@ -1,0 +1,34 @@
+version: "3.8"
+services:
+  cic-polyglot:
+    build: cic-polyglot
+    restart: always
+    network_mode: host
+    volumes:
+      #change ports on the left side of ":" for the host port 
+      #serial port for modbus
+      - /dev/ttyS0:/dev/ttyS0
+      #serial port for dnp3
+      - /dev/ttyS2:/dev/ttyS1
+
+    privileged: true
+    environment:
+      - DXL_ADDRESS=0.0.0.0
+      - DXL_PORT=8000
+      
+  taxii-client:
+    build: taxii-client
+    environment:
+      - TAXII_SERVER_ADDRESS=localhost
+      - TAXII_SERVER_PORT=5000
+      - TAXII_API_ROOT=trustgroup1
+      - TAXII_COLLECTION=91a7b528-80eb-42ed-a74d-c6fbd5a26116
+      - DXL_ADDRESS=0.0.0.0
+      - DXL_PORT=8000
+      - DXL_METHOD=query
+      - PYTHONUNBUFFERED=1
+      - USERNAME=admin
+      - PASSWORD=Password0
+    network_mode: host
+    depends_on:
+      - cic-polyglot

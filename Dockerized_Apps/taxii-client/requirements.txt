@@ -1,0 +1,5 @@
+Flask
+stix2
+taxii2-client
+requests
+simplejson
