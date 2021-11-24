@@ -60,4 +60,15 @@ $sudo chmod +w /dev/pts/*
 $sudo usermod -a -G dialout <username>
 
 ```
-It is required to build the python version of libiec61850, copy the iec61850.py and _iec61850.so files to iec61850 folder located within the CIC-Polyglot Folder. 
+# IEC61850 Setup
+It is required to build the python version of libiec61850, copy the iec61850.py and _iec61850.so files to iec61850 folder located within the CIC-Polyglot Folder.
+
+# Support
+For support and other details, please contact [Kwasi Boakye-Boateng](mailto:kwasi.boakye-boateng@unb.ca).
+
+# Contributors
+[Ida Sri Rejeki Siahaan](mailto:ida.siahaan@unb.ca)
+
+[Mahdi Abrishami](mailto:mahdi.abrishami@unb.ca)
+
+[Kwasi Boakye-Boateng](mailto:kwasi.boakye-boateng@unb.ca)
