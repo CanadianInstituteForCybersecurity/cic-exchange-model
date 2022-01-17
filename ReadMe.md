@@ -25,7 +25,7 @@ protocols will be continuously added. To see how CIC-PolyglOT can be communicate
 # Docker Installation
 Our main work is the CIC-PolyglOT, other folders were included to because they contain code to connect to CIC-PolglOT. Those can be used as reference to create your own FieldBus clients and TAXII clients and servers. We used version 2.1 for TAXII and STIX
 It is recommended that you run the Dockerized applications because they already handle the heavy lifting for the TAXII client and CIC-PolyglOT. Changes need to be made to the environment variables in the docker-compose file before building the docker containers.
-For serial connections, please refer to the [Serial Port Configurations](# Serial Port Configurations) section. The serial connection configuration can be commented out in the docker-compose file if it is not desired.
+For serial connections, please refer to the [Serial Port Configurations](#Serial Port Configurations) section. The serial connection configuration can be commented out in the docker-compose file if it is not desired.
 
 # Normal Installation
 If Docker containers are not preferred then some installations need to be made as specified in each of the individual folders where specified. For serial connections, please refer to the [Serial Port Configurations](# Serial Port Configurations) section.
